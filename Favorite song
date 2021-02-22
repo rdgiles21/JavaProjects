@@ -1,0 +1,41 @@
+/**
+ *
+ * @author ryangiles
+ */
+
+
+public class FavoriteSong1 {
+    public static void main(String[] args){
+        String artist = "deadmau";
+        String album = "For lack of a better name";
+        int num = 5;
+        int ReleaseDate = 2009;
+        double extSongDuration = 5.29;
+        double origSongduration = 3.15;
+        char s= 's';
+        
+        double difference = extSongDuration - origSongduration;
+        String seconds = "song measured in seconds or s";
+        String timeDifference = "The difference between the original and extended mix:";
+       
+        String artist2 = "Rob Swire";
+        String genre = "Techno";
+        String songTitle = "Ghosts 'n' Stuff";
+        
+        System.out.println("My favorite Song for coding is:" + songTitle);
+        System.out.println("Produced by :" + artist + num);
+        System.out.println("Featuring :" + artist2 );
+        System.out.println("Album Name :" + album);
+        System.out.println("First Release Date :" + ReleaseDate);
+        System.out.println("Some Fun facts about the song:" );
+        System.out.println("    There are two different versions" );
+        System.out.println("    Original cut and Extended cut :" );
+        System.out.println("    The Original cut was :" + origSongduration + s);
+        System.out.println("    The Extended cut was :" + extSongDuration + s );
+       
+        System.out.println(timeDifference  + difference + s);
+        System.out.println("I Just love " + genre.toUpperCase());
+        System.out.println("Disclaimer : " + seconds);
+        System.out.println("P.S. : I learned how to use camelcase.".replace('c','C'));
+    }
+}

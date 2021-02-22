@@ -1,0 +1,55 @@
+Author Ryan Giles
+
+
+package betweenpalindromestring.betweenpalindromestring;
+
+
+import java.util.*;
+
+public class betweenPalindromeString {
+    public static void main (String[] args){
+  // String Reverse Request and function call
+     Random rnd = new Random();
+
+        String g = reverse("abracadabra");
+        System.out.println(g);   
+    //   String p = ifpalindrome("racecar");
+      
+       System.out.println(isPalindrome("radar"));
+       System.out.println(isPalindrome("kayak"));
+       System.out.println(isPalindrome("forest"));
+      
+      int ran = inBetween(5,80);
+      System.out.println(ran);
+    }
+//Reverse string method
+       public static String reverse(String r){
+        char[] revLet = new char[r.length()];
+        int letInd = 0;
+        for(int i = r.length() - 1; i >= 0; i--){
+          revLet[letInd] = r.charAt(i);
+          letInd++;
+        }
+        String reverse = "";
+        for(int i = 0; i < r.length(); i++)
+        {
+            reverse = reverse + revLet[i];
+        }  
+        return reverse;
+    }
+// palindrome check
+       public static boolean isPalindrome(String p) {
+        String reversed = "";
+        int len = p.length();
+        for (int i = len - 1; i >= 0; i--)
+        {
+        reversed = reversed + p.charAt(i);
+        }
+        return p.equals(reversed);
+    }
+// number between a range given
+       public static int inBetween(int start, int finish){
+           return (new Random().nextInt(finish + 1 - start) + start);
+           
+       }
+}

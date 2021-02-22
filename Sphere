@@ -1,0 +1,42 @@
+Author Ryan Giles
+
+//Part 1 main class
+
+package Sphere;
+public class Sphere {
+    public static void main(String[] args){
+     SphereDimension Sphere = new SphereDimension();
+
+     System.out.println("The radius of the sphere is : " + Sphere.r +"cm");
+     System.out.println("The Diameter of the Sphere is : " + Sphere.diameter() +"cm");
+     System.out.println("The circumference of the Sphere is : " + Sphere.circum() +"cm");
+     System.out.println("The Surface area of the Sphere is : " + Sphere.surfaceArea() +"cm Squared");
+     System.out.println("The volume of the Sphere is : " + Sphere.volume() +"cm Cubed");
+    } 
+}
+// Part 2 Constructors
+package Sphere;
+
+import java.util.*;
+
+public class SphereDimension {
+    public double pi;
+    public double r = 8;
+    public double diameter;
+    public double circum;
+    public double surfaceArea;
+    public double volume;
+    
+    public double diameter(){
+     return r * 2;
+  }
+    public  double circum(){
+     return r*2*3.14;
+  } 
+    public double surfaceArea(){
+    return 4*3.14*r*r;  
+  }
+    public double volume(){
+    return (4/3)*3.14*r*r*r; 
+   }
+  }

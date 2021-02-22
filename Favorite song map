@@ -1,0 +1,52 @@
+Author Ryan Giles
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class favoriteSongMap {
+       public static void main(String[] args){
+      
+    
+       String[] songInformation = 
+       //<editor-fold desc="raw song info data">
+           {"Artist", "Deadmau5",
+           "featuring", "RobSwire",
+           "Album", "Forlackofabettername",
+           "Genre", "Techno",
+           "ReleaseDate", "twentyZeroNine",
+           "SongVersion", "ExtendedMix",
+           "Songduration", "fiveTwentyNine",
+           "MusicType", "ClubEDM",
+           "Props", "Cubes",
+           "ProducedNy", "Software",
+           "MostknownFor", "Beats",
+           "ComputerUsed", "MacBookPro",
+           "SoftwareUsed", "LogicPro",};
+       //</editor-fold>
+       
+       String[] ident = new String[songInformation.length/2];
+       String[] information = new String[songInformation.length/2];
+       for(int i = 0; i < songInformation.length; i++){
+           if(i % 2 == 0)
+           {
+           ident[i/2] = songInformation[i];
+           }
+           else
+           {
+           information[i/2] = songInformation[i];
+           }
+           
+         }
+       
+       Map<String,String> songCharacteristics = new HashMap<>();
+        for(int i = 0; i < information.length; i++)
+        {
+            songCharacteristics.put(information[i],ident[i]);
+        }
+        
+        System.out.println(songCharacteristics.get("RobSwire"));
+
+ }
+
+} 
